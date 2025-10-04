@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Around Winston Downs</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@5.4.3/dist/photoswipe.css">
 </head>
 
 <body>
@@ -16,6 +17,7 @@
             </div>
             <nav>
                 <ul>
+                    <li><a href="#gallery" class="nav-link">Gallery</a></li>
                     <li><a href="#map" class="nav-link">Map</a></li>
                     <li><a href="#parks" class="nav-link">Parks</a></li>
                     <li><a href="#running-trails" class="nav-link">Running Trails</a></li>
@@ -40,11 +42,70 @@
     </section>
 
     <main class="container">
+        <section id="gallery" class="content-section">
+            <h2>Photo Gallery</h2>
+            <div class="gallery-grid" id="gallery-grid">
+                <a href="images/neighborhood.jpg" data-pswp-width="3840" data-pswp-height="2160" target="_blank">
+                    <img src="images/neighborhood.jpg" alt="Winston Downs Neighborhood" />
+                    <div class="gallery-caption">Neighborhood</div>
+                </a>
+                <a href="images/cherry_creek_mural_fox.jpg" data-pswp-width="3840" data-pswp-height="2160"
+                    target="_blank">
+                    <img src="images/cherry_creek_mural_fox.jpg" alt="Cherry Creek Mural - Fox" />
+                    <div class="gallery-caption">Cherry Creek Mural - Fox</div>
+                </a>
+                <a href="images/cherry_creek_mural_geese.jpg" data-pswp-width="3840" data-pswp-height="2160"
+                    target="_blank">
+                    <img src="images/cherry_creek_mural_geese.jpg" alt="Cherry Creek Mural - Geese" />
+                    <div class="gallery-caption">Cherry Creek Mural - Geese</div>
+                </a>
+                <a href="images/denver_green_school.jpg" data-pswp-width="3840" data-pswp-height="2160" target="_blank">
+                    <img src="images/denver_green_school.jpg" alt="Denver Green School" />
+                    <div class="gallery-caption">Denver Green School</div>
+                </a>
+                <a href="images/library.jpg" data-pswp-width="3840" data-pswp-height="2160" target="_blank">
+                    <img src="images/library.jpg" alt="Library" />
+                    <div class="gallery-caption">Library</div>
+                </a>
+                <a href="images/youth_park.jpg" data-pswp-width="3840" data-pswp-height="2160" target="_blank">
+                    <img src="images/youth_park.jpg" alt="Youth Park" />
+                    <div class="gallery-caption">Youth Park</div>
+                </a>
+                <a href="images/lowry_sports_complex.jpg" data-pswp-width="3840" data-pswp-height="2160"
+                    target="_blank">
+                    <img src="images/lowry_sports_complex.jpg" alt="Lowry Sports Complex" />
+                    <div class="gallery-caption">Lowry Sports Complex</div>
+                </a>
+                <a href="images/swim_dogs_george_washington_pool.jpg" data-pswp-width="3840" data-pswp-height="2160"
+                    target="_blank">
+                    <img src="images/swim_dogs_george_washington_pool.jpg" alt="Swim Dogs at George Washington Pool" />
+                    <div class="gallery-caption">Swim Dogs - George Washington Pool</div>
+                </a>
+                <a href="images/gymnastics_plus.jpg" data-pswp-width="3840" data-pswp-height="2160" target="_blank">
+                    <img src="images/gymnastics_plus.jpg" alt="Gymnastics Plus" />
+                    <div class="gallery-caption">Gymnastics Plus</div>
+                </a>
+                <a href="images/four_mile_park_concert.jpg" data-pswp-width="3840" data-pswp-height="2160"
+                    target="_blank">
+                    <img src="images/four_mile_park_concert.jpg" alt="Four Mile Park Concert" />
+                    <div class="gallery-caption">Four Mile Park Concert</div>
+                </a>
+                <a href="images/chicken_coops.jpg" data-pswp-width="3840" data-pswp-height="2160" target="_blank">
+                    <img src="images/chicken_coops.jpg" alt="Chicken Coops" />
+                    <div class="gallery-caption">Chicken Coops</div>
+                </a>
+            </div>
+        </section>
+
         <section id="map" class="content-section">
             <h2>Map</h2>
             <div class="card">
-                <div class="map-placeholder">
-                    <p>Interactive neighborhood map coming soon</p>
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3070.7426891795584!2d-104.90682892346494!3d39.667843971543916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876c7da5d11c9d9d%3A0x8c8e3b9e3c8e3b9e!2s6700%20E%20Virginia%20Ave%2C%20Denver%2C%20CO%2080224!5e0!3m2!1sen!2sus!4v1696435200000!5m2!1sen!2sus"
+                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
                 </div>
                 <div class="section-content">
                     <p>Explore our neighborhood and discover local amenities, parks, trails, and more. Our interactive
@@ -158,6 +219,7 @@
                 <div class="footer-section">
                     <h4>Quick Links</h4>
                     <ul>
+                        <li><a href="#gallery">Gallery</a></li>
                         <li><a href="#map">Map</a></li>
                         <li><a href="#parks">Parks</a></li>
                         <li><a href="#running-trails">Running Trails</a></li>
@@ -168,6 +230,19 @@
         </div>
     </footer>
 
+    <script type="module">
+        import PhotoSwipeLightbox from 'https://cdn.jsdelivr.net/npm/photoswipe@5.4.3/dist/photoswipe-lightbox.esm.js';
+        import PhotoSwipe from 'https://cdn.jsdelivr.net/npm/photoswipe@5.4.3/dist/photoswipe.esm.js';
+
+        const lightbox = new PhotoSwipeLightbox({
+            gallery: '#gallery-grid',
+            children: 'a',
+            pswpModule: PhotoSwipe,
+            bgOpacity: 0.9,
+            padding: { top: 50, bottom: 50, left: 50, right: 50 },
+        });
+        lightbox.init();
+    </script>
     <script src="script.js"></script>
 </body>
 
