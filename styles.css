@@ -83,6 +83,23 @@ nav a:hover::after {
     width: 100%;
 }
 
+.github-link {
+    display: flex;
+    align-items: center;
+}
+
+.github-link:hover::after {
+    width: 0;
+}
+
+.github-link svg {
+    transition: transform 0.3s ease;
+}
+
+.github-link:hover svg {
+    transform: scale(1.1);
+}
+
 .hero {
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
     color: var(--white);
