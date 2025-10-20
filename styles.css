@@ -365,6 +365,46 @@ footer {
     opacity: 1;
 }
 
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent-color);
+    transition: width 0.3s ease;
+}
+
+a:hover {
+    color: var(--primary-color);
+}
+
+a:hover::after {
+    width: 100%;
+}
+
+nav a::after,
+.github-link::after,
+.btn::after,
+.gallery-grid a::after {
+    display: none;
+}
+
+nav a:hover::after,
+.github-link:hover::after,
+.btn:hover::after,
+.gallery-grid a:hover::after {
+    display: none;
+}
+
 .footer-bottom {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding-top: 1.5rem;
