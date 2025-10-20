@@ -100,6 +100,22 @@ nav a:hover::after {
     transform: scale(1.1);
 }
 
+.distance-note {
+    color: var(--text-light);
+    padding: 0.5rem 1rem;
+    margin: 1rem auto;
+    max-width: 1200px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.distance-note p {
+    font-weight: 400;
+    font-size: 0.9rem;
+    margin: 0;
+    font-style: italic;
+}
+
 .hero {
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
     color: var(--white);
@@ -445,6 +461,15 @@ footer {
     .gallery-grid {
         grid-template-columns: 1fr;
         gap: 1rem;
+    }
+
+    .distance-note {
+        margin: 0.5rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .distance-note p {
+        font-size: 0.85rem;
     }
 }
 
